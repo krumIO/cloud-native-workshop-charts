@@ -90,46 +90,7 @@ items:
       status: true
     egress: []
     file: []
-    ingress:
-    - action: allow
-      applications:
-      - HTTP
-      name: nv.development-baseline-golang-baseline-golang-app.development-ingress-3
-      ports: any
-      priority: 0
-      selector:
-        comment: ""
-        criteria: []
-        name: nodes
-        original_name: ""
-    - action: allow
-      applications:
-      - HTTP
-      name: nv.development-baseline-golang-baseline-golang-app.development-ingress-4
-      ports: any
-      priority: 0
-      selector:
-        comment: ""
-        criteria:
-        - key: service
-          op: =
-          value: rke2-ingress-nginx-controller.kube-system
-        - key: domain
-          op: =
-          value: kube-system
-        name: nv.rke2-ingress-nginx-controller.kube-system
-        original_name: ""
-    - action: allow
-      applications:
-      - HTTP
-      name: nv.development-baseline-golang-baseline-golang-app.development-ingress-5
-      ports: any
-      priority: 0
-      selector:
-        comment: ""
-        criteria: []
-        name: external
-        original_name: ""
+    ingress: []
     process:
     - action: allow
       allow_update: false
