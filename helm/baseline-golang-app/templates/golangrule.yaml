@@ -4,7 +4,6 @@ items:
   kind: NvSecurityRule
   metadata:
     name: nv.development-baseline-golang-baseline-golang-app.development
-    namespace: development
   spec:
     dlp:
       settings: []
@@ -23,7 +22,7 @@ items:
         criteria: []
         name: nodes
         original_name: ""
-    - action: allow
+    - action: deny
       applications:
       - HTTP
       name: nv.development-baseline-golang-baseline-golang-app.development-ingress-1
@@ -40,7 +39,7 @@ items:
           value: kube-system
         name: nv.rke2-ingress-nginx-controller.kube-system
         original_name: ""
-    - action: allow
+    - action: deny
       applications:
       - HTTP
       - SSL
@@ -64,7 +63,7 @@ items:
     process_profile:
       baseline: zero-drift
     target:
-      policymode: Discover
+      policymode: Protect
       selector:
         comment: ""
         criteria:
