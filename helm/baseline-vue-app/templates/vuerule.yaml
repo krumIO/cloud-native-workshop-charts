@@ -4,7 +4,6 @@ items:
   kind: NvSecurityRule
   metadata:
     name: nv.development-baseline-vue-baseline-vue-app.development
-    namespace: development
   spec:
     dlp:
       settings: []
@@ -64,7 +63,7 @@ items:
     process_profile:
       baseline: zero-drift
     target:
-      policymode: Discover
+      policymode: Protect
       selector:
         comment: ""
         criteria:
