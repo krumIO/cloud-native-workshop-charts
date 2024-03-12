@@ -19,6 +19,8 @@ targetCustomizations:
     values:
       ingress:
         enabled: false
+      image:
+        tag: "20230823T175417"
 
 - name: prod
   namespace:  tfmc
@@ -31,3 +33,5 @@ targetCustomizations:
     values:
       ingress:
         enabled: false
+      image:
+        tag: "20230823T175417"
