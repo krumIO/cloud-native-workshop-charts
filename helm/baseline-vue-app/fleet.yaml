@@ -1,0 +1,33 @@
+# Custom helm options
+helm:
+  # The release name to use. If empty a generated release name will be used
+  releaseName: my-vue-app
+
+  # How long for helm to wait for the release to be active. If the value
+  # is less that or equal to zero, we will not wait in Helm
+  timeoutSeconds: 0
+
+targetCustomizations:
+- name: dev
+  namespace: tfmc
+  defaultNamespace: tfmc
+  clusterSelector:
+      matchLabels:
+        env: dev
+  helm:
+    # Custom values that will be passed as values.yaml to the installation
+    values:
+      ingress:
+        enabled: false
+
+- name: prod
+  namespace:  tfmc
+  defaultNamespace:  tfmc
+  clusterSelector:
+      matchLabels:
+        env: prod
+  helm:
+    # Custom values that will be passed as values.yaml to the installation
+    values:
+      ingress:
+        enabled: false
